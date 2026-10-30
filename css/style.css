@@ -1,3 +1,4 @@
+/* Підключення локальних шрифтів */
 @font-face {
   font-family: "Young Serif";
   src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
@@ -10,6 +11,7 @@
   font-weight: 100 900;
 }
 
+/* Основні кольори дизайн-системи */
 :root {
   --white: hsl(0, 0%, 100%);
   --stone-100: hsl(30, 54%, 90%);
@@ -20,9 +22,13 @@
   --rose-800: hsl(332, 51%, 32%);
   --rose-50: hsl(330, 100%, 98%);
 }
+
+/* Налаштування моделі блоку */
 * {
   box-sizing: border-box;
 }
+
+/* Блок часу приготування */
 .preparation-title {
   font-family: "Outfit";
   margin-bottom: 12px;
@@ -30,14 +36,19 @@
   font-weight: 700;
   color: var(--rose-800);
 }
+
 .preparation {
   padding: 24px;
   background-color: var(--rose-50);
   border-radius: 12px;
 }
+
+/* Основний контейнер сторінки */
 .recipe-page {
   padding: 123px 24px;
 }
+
+/* Картка рецепта */
 .recipe-card {
   width: 100%;
   max-width: 736px;
@@ -47,12 +58,16 @@
   background-color: var(--white);
   border-radius: 16px;
 }
+
+/* Зображення готової страви */
 .recipe-image {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 12px;
 }
+
+/* Загальні стилі заголовків */
 .recipe-title,
 h2 {
   margin: 0;
@@ -61,27 +76,35 @@ h2 {
   color: var(--stone-900);
 }
 
+/* Головний заголовок рецепта */
 .recipe-title {
   font-size: 40px;
   line-height: 1.1;
 }
 
+/* Заголовки основних розділів */
 h2 {
   color: var(--brown-800);
   font-size: 28px;
   line-height: 1.1;
 }
+
+/* Вертикальне розташування вмісту рецепта за допомогою Flexbox */
 .recipe-content {
   display: flex;
   flex-direction: column;
   gap: 32px;
   padding-top: 28px;
 }
+
+/* Розташування заголовка та опису */
 .recipe-header {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+
+/* Список інгредієнтів */
 .ingredients-list {
   padding-left: 24px;
   margin-top: 20px;
@@ -92,9 +115,12 @@ h2 {
   margin-bottom: 8px;
 }
 
+/* Колір маркерів списку інгредієнтів */
 .ingredients-list li::marker {
   color: var(--brown-800);
 }
+
+/* Список інструкцій із приготування */
 .instructions-list {
   padding-left: 24px;
   margin: 0;
@@ -106,10 +132,13 @@ h2 {
   margin-bottom: 8px;
 }
 
+/* Стилізація нумерації інструкцій */
 .instructions-list li::marker {
   color: var(--brown-800);
   font-weight: 700;
 }
+
+/* Список часу приготування */
 .preparation-list {
   padding-left: 24px;
 }
@@ -119,46 +148,59 @@ h2 {
   margin-bottom: 8px;
 }
 
+/* Прибирання відступу в останньому пункті списку */
 .preparation-list li:last-child {
   margin-bottom: 0;
 }
+
+/* Розділювальні лінії між основними блоками */
 .ingredients,
 .instructions {
   padding-bottom: 32px;
   border-bottom: 1px solid var(--stone-150);
 }
+
+/* Блок харчової цінності */
 .nutrition {
   padding-bottom: 32px;
   border-bottom: none;
 }
+
+/* Таблиця харчової цінності */
 .nutrition-table {
   width: 100%;
   margin-top: 20px;
   border-collapse: collapse;
 }
 
-.nutrition-table tr  {
+.nutrition-table tr {
   border-bottom: 1px solid var(--stone-150);
 }
 
+/* Прибирання нижньої межі останнього рядка таблиці */
 .nutrition-table tr:last-child {
   border-bottom: none;
 }
 
+/* Внутрішні відступи та вирівнювання комірок таблиці */
 .nutrition-table th,
 .nutrition-table td {
   padding: 12px 24px;
   text-align: left;
 }
 
+/* Стиль назв показників харчової цінності */
 .nutrition-table th {
   font-weight: 400;
 }
 
+/* Виділення значень харчової цінності */
 .nutrition-table td {
   color: var(--brown-800);
   font-weight: 700;
 }
+
+/* Адаптація сторінки для мобільних пристроїв */
 @media (max-width: 600px) {
   .recipe-page {
     padding: 0;
@@ -193,6 +235,8 @@ h2 {
     padding-right: 32px;
   }
 }
+
+/* Адаптація відступів для планшетів */
 @media (min-width: 601px) and (max-width: 800px) {
   .recipe-page {
     padding: 30px 24px;
@@ -202,11 +246,15 @@ h2 {
     padding: 32px;
   }
 }
+
+/* Плавна зміна зовнішніх відступів на середніх екранах */
 @media (min-width: 801px) and (max-width: 999px) {
   .recipe-page {
     padding: clamp(30px, calc(30px + (100vw - 800px) * 0.45), 123px) 24px;
   }
 }
+
+/* Базові стилі сторінки */
 body {
   margin: 0;
   font-family: "Outfit";
